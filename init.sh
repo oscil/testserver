@@ -5,5 +5,7 @@
 # ﻿sudo /etc/init.d/mysql start﻿
 
 sudo ln -sf /home/box/web/etc/nginx.conf /etc/nginx/sites-enabled/test.conf
+sudo ln -sf /home/box/web/etc/gunicorn.conf /etc/gunicorn.d/test
 sudo rm -rf /etc/nginx/sites-enabled/default
+gunicorn -c /etc/gunicorn.d/test &
 sudo /etc/init.d/nginx restart
