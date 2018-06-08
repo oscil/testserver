@@ -35,5 +35,5 @@ url(r'^new/', admin.site.urls),
 
     url(r'^admin/', admin.site.urls),
     url(r'^question/', include('qa.urls')),
-    url(r'^/', admin.site.urls),
+    url(r'^$', admin.site.urls),
 ]
